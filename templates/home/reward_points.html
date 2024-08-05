@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static from static %}
 {% block title %}
-Home
+Reward Points Redeem
 {% endblock %}
 
 {% block content %}
@@ -22,20 +22,34 @@ Home
 
 <div class="container-fluid">
   <div class="row align-items-center text-center" style="height: 80px; background-color: #ff9900;">
-    <h2><strong>HOME</strong></h2>
+    <h2><strong>Reward Points Redeem</strong></h2>
   </div>
 </div>
 
 <div class="container col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="{% static 'image/home/home.png' %}" class="d-block mx-lg-auto img-fluid" alt="" width="400" height="400" loading="lazy">
+            <img src="{% static 'image/home/reward.png' %}" class="d-block mx-lg-auto img-fluid" alt="" width="400" height="400" loading="lazy">
         </div>
 
         <div class="col-lg-6">
-            <p class="h4"><strong>
-              Cosen Saws and Mechalogix are proud to bring you the latest in AI manufacturing technology.  CPC SawLogix™. Cosen's predictive computing is specifically designed to help industrial saw owners and operators retrieve game-changing data to make their sawing operations more efficient and cost effective.   CPC generates health and usage reports, preventive maintenance reminders, and real-time updates on cutting operations.
-            </strong></p>
+            <p class="h5 my-2" style="color: brown;">
+                New member bonus points will be given to members who log in.
+
+                Bonus points can be redeemed for parts and supplies of your choice!
+                
+                The first purchase and have the first purchase bonus, buy more bonus points, monthly automatic reminder bonus good health exchange, occasional exchange activities.
+                
+                Join the membership, many benefits, please take advantage of more!
+            </p>
+            <br>
+            <p class="h5"><strong>Click the button to enter the cloud portal.</strong></p>
+            <br>
+            <div class="d-grid col-8 mx-auto">
+                <a class="btn my-3 justify-content-center" href="#" role="button" style="background-color: orange;"><strong>Register to Get Points!</strong></a>
+            </div>
+            <!-- <a class="btn my-3 justify-content-center" href="#" role="button" style="background-color: orange;">Register to Get Points!</a> -->
+
         </div>
     </div>
 </div>

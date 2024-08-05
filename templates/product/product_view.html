@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load static from static %}
+{% block title %}
+{{category.name}}
+{% endblock %}
+
+{% block content %}
+<section class="bsb-hero-1 px-3 bsb-overlay bsb-hover-pull" style="background-image: url('../../static/image/banner_product.jpg'); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 300px;" >
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6">
+          <!-- <h2 class="display-3 fw-bold mb-3">HOME</h2> -->
+          <!-- <p class="lead mb-5">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p> -->
+          <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn bsb-btn-xl btn-light gap-3">Free Consultation</button>
+            <button type="button" class="btn bsb-btn-xl btn-outline-light">Buy Credits</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+  <div class="row align-items-center text-center" style="height: 80px; background-color: #ff9900;">
+    <h2><strong>{{category.name}}</strong></h2>
+  </div>
+</div>
+
+<div class="container px-4 py-5">
+    {% if category.image_url %}
+      <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-4">
+              <img src="{{category.image_url}}" class="d-block mx-lg-auto img-fluid" alt="" width="400" height="400" loading="lazy">
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="align-items-start text-start">
+              {% if category.specification %}  
+                <h4><strong>Specification:</strong></h4>
+                {% for specification in specifications %}
+                  <ul>
+                    <li><strong>{{specification}}</strong></li>
+                  </ul>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <h4><strong>Subscription Proposal:</strong></h4>
+            <div class="mt-3 mb-5">
+              {% for product in products %} 
+                <p class="h6"><strong>Decvice Price : {{product.price}}</strong></p> 
+                <br>
+                <p class="h6"><strong>{{product.name_tag}} : {{product.subscription}}</strong></p>
+                <br>
+                <p class="h6"><strong>Total : {{product.total}}</strong></p>
+                <br>
+                <a class="btn btn-outline-dark mb-3" href="#" role="button" style="background-color: orange;">Add to Shopping Cart</a>
+                <br>
+              {% endfor %}
+            </div>
+        </div>
+      </div>
+    {% else %}
+      {% for product in products %}
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-4">
+          {% if product.image_url %}
+            <img src="{{product.image_url}}" class="d-block mx-lg-auto img-fluid" alt="" width="400" height="400" loading="lazy">
+          {% endif %}
+        </div>
+          
+        <div  class="col-12 col-lg-4">
+          <p><strong>Name : </strong>{{product.name}}</p>
+          <p><strong>Model : </strong>{{product.name_tag}}</p>
+          {% if product.propose %}
+            <p><strong>Propose : </strong>{{product.propose}}</p>
+          {% endif %}
+          <p>
+            {{product.describe}}
+          </p>
+          {% if product.applicable_for %}
+            <p><strong>Applicable for : </strong>{{product.applicable_for}}</p>
+          {% endif %}
+        </div>
+
+        <div class="col-12 col-lg-4">
+          {% if product.price %}
+          <p class="h6"><strong>Price : {{product.price}}</strong></p> 
+          {% else %}
+            <p class="h6"><strong>Price : By Case</strong></p>
+          {% endif %}
+          <br>
+          <a class="btn btn-outline-dark mb-3" href="#" role="button" style="background-color: orange;">Add to Shopping Cart</a>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}
+
+    {% endif %}
+</div>
+{% endblock %}
