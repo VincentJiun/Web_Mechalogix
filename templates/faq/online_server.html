@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static from static %}
+{% block title %}
+Online customer service
+{% endblock %}
+
+{% block content %}
+<section class="bsb-hero-1 px-3 bsb-overlay bsb-hover-pull" style="background-image: url('../../static/image/banner_home.jpg'); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 300px;" >
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6">
+          <!-- <h2 class="display-3 fw-bold mb-3">HOME</h2> -->
+          <!-- <p class="lead mb-5">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p> -->
+          <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn bsb-btn-xl btn-light gap-3">Free Consultation</button>
+            <button type="button" class="btn bsb-btn-xl btn-outline-light">Buy Credits</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+  <div class="row align-items-center text-center" style="height: 80px; background-color: #ff9900;">
+    <h2><strong>Intelligent Customer Service</strong></h2>
+  </div>
+</div>
+
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="../../static/image/faq/faq_server.jpg" class="d-block mx-lg-auto img-fluid" alt="" width="400" height="400" loading="lazy">
+        </div>
+
+        <div class="col-lg-6 text-center">
+            <p class="h4" style="color: orange;"><strong>
+                Intelligent Customer Service
+            </strong></p>
+            <br>
+            <p class="h5" style="color: gray;"><strong>
+                Intelligent customer service for 24-hour service
+            </strong></p>
+            <br>
+            <p class="h5" style="color: gray;"><strong>
+                LINE online customer service support without interruption
+            </strong></p>
+        </div>
+    </div>
+
+    <div class="row align-items-start g-2 py-5">
+      <div class="col-12 col-lg-4 px-3">
+        <div class="card border-light">
+          <img src="{% static 'image/faq/customer1.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p>You can join the official Gosun Precision-Cosen account in Line and Messenger.</p>
+            <p>If you have any questions about our products, please click on the Intelligent Customer Service button and we will be able to answer your questions in a timely manner.</p>
+            <p>If you are satisfied with the service, please fill out a 5-star rating for us.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 px-3">
+        <div class="card border-light">
+          <img src="{% static 'image/faq/customer2.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p>When you have further questions, you can click on the dedicated customer service to reply for you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 px-3">
+        <div class="card border-light">
+          <img src="{% static 'image/faq/customer3.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p>You can ask questions in the Q&A section, and canned messages will be answered for you automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="card mb-3 border-light align-items-canter">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="{% static 'image/faq/qr_fb.png' %}" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <p class="card-text">FB QR Cord</p>
+                <p class="card-text">Please scan to enter COSEN HOME fan page</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="card mb-3 border-light align-items-center">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <img src="{% static 'image/faq/qr_fb.png' %}" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <p class="card-text">Line QR Cord</p>
+                <p class="card-text">You can also enter your official account by entering your @225itqhk ID.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

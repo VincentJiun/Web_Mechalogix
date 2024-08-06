@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static from static %}
+{% block title %}
+Machine Utilization Status
+{% endblock %}
+
+{% block content %}
+<section class="bsb-hero-1 px-3 bsb-overlay bsb-hover-pull" style="background-image: url('../../static/image/banner_home.jpg'); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 300px;" >
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6">
+          <!-- <h2 class="display-3 fw-bold mb-3">HOME</h2> -->
+          <!-- <p class="lead mb-5">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p> -->
+          <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn bsb-btn-xl btn-light gap-3">Free Consultation</button>
+            <button type="button" class="btn bsb-btn-xl btn-outline-light">Buy Credits</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+  <div class="row align-items-center text-center" style="height: 80px; background-color: #ff9900;">
+    <h2><strong>Machine Utilization Status</strong></h2>
+  </div>
+</div>
+
+<div class="container col-xxl-8 px-4 py-5">
+    <p>
+        If you have any questions about the operation, you can also check the historical data.
+    </p>
+
+    <div class="row align-items-center justify-content-center my-4">
+      <div class="col-12 col-lg-8 my-4">
+        <img src="{% static 'image/solution/utilization1.png' %}" class="img-fluid" alt="...">
+      </div>
+      <div class="col-12 col-lg-8 my-4">
+        <img src="{% static 'image/solution/utilization2.png' %}" class="img-fluid" alt="...">
+      </div>
+      <div class="col-12 col-lg-8 my-4">
+        <img src="{% static 'image/solution/utilization3.png' %}" class="img-fluid" alt="...">
+      </div>
+    </div>
+</div>
+{% endblock %}

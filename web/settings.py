@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
+# 瀏覽器關閉時，Session 就結束
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+# 設定 Cookie 存在時間 60*30 (秒)
+SESSION_COOKIE_AGE = 1800
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +47,10 @@ INSTALLED_APPS = [
 
     'home',
     'product',
+    'faq',
+    'cart',
+    'about',
+    'solution',
 ]
 
 MIDDLEWARE = [

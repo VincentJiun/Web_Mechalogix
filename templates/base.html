@@ -52,12 +52,12 @@
                     About Company
                   </a>
                   <ul class="dropdown-menu" style="background-color: #bab8b4;">
-                    <li><a class="dropdown-item" href="{% url 'product_home' %}">Company</a></li>
-                    <li><a class="dropdown-item" href="#">history</a></li>
-                    <li><a class="dropdown-item" href="#">Professional Team</a></li>
-                    <li><a class="dropdown-item" href="#">Product Advantages</a></li>
-                    <li><a class="dropdown-item" href="#">Recruitment</a></li>
-                    <li><a class="dropdown-item" href="#">News</a></li>
+                    <li><a class="dropdown-item" href="{% url 'company' %}">Company</a></li>
+                    <li><a class="dropdown-item" href="{% url 'history' %}">history</a></li>
+                    <li><a class="dropdown-item" href="{% url 'team' %}">Professional Team</a></li>
+                    <li><a class="dropdown-item" href="{% url 'product_advantages' %}">Product Advantages</a></li>
+                    <li><a class="dropdown-item" href="{% url 'recruitment' %}">Recruitment</a></li>
+                    <li><a class="dropdown-item" href="{% url 'news' %}">News</a></li>
                   </ul>
                 </li>
 
@@ -86,7 +86,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Shopping Cart</a>
+                    <a class="nav-link" href="{% url 'cart_view' %}">Shopping Cart</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -94,20 +94,20 @@
                       Solution
                     </a>
                     <ul class="dropdown-menu" style="background-color: #bab8b4;">
-                      <li><a class="dropdown-item" href="#">Work Order Cost</a></li>
-                      <li><a class="dropdown-item" href="#">Real-Time Cutting Status</a></li>
+                      <li><a class="dropdown-item" href="{% url 'order_cost' %}">Work Order Cost</a></li>
+                      <li><a class="dropdown-item" href="{% url 'real_time' %}">Real-Time Cutting Status</a></li>
                       <!-- <li>
                         <hr class="dropdown-divider">
                       </li> -->
-                      <li><a class="dropdown-item" href="#">Machine Utilization Status</a></li>
-                      <li><a class="dropdown-item" href="#">Shift Status</a></li>
-                      <li><a class="dropdown-item" href="#">Workshop Bulletin Bord</a></li>
-                      <li><a class="dropdown-item" href="#">Sawblade Predictive Diagnosis</a></li>
-                      <li><a class="dropdown-item" href="#">Real-Time APP Notice</a></li>
-                      <li><a class="dropdown-item" href="#">Allowable values Set-Up</a></li>
-                      <li><a class="dropdown-item" href="#">Automatic Reports</a></li>
-                      <li><a class="dropdown-item" href="#">Sawlogix APP</a></li>
-                      <li><a class="dropdown-item" href="#">More Solution</a></li>
+                      <li><a class="dropdown-item" href="{% url 'utilization' %}">Machine Utilization Status</a></li>
+                      <li><a class="dropdown-item" href="{% url 'shift_status' %}">Shift Status</a></li>
+                      <li><a class="dropdown-item" href="{% url 'workshop' %}">Workshop Bulletin Bord</a></li>
+                      <li><a class="dropdown-item" href="{% url 'sawblade' %}">Sawblade Predictive Diagnosis</a></li>
+                      <li><a class="dropdown-item" href="{% url 'real_time_app' %}">Real-Time APP Notice</a></li>
+                      <li><a class="dropdown-item" href="{% url 'allowable_values' %}">Allowable values Set-Up</a></li>
+                      <li><a class="dropdown-item" href="{% url 'automatic_reports' %}">Automatic Reports</a></li>
+                      <li><a class="dropdown-item" href="{% url 'sawlogix' %}">Sawlogix APP</a></li>
+                      <li><a class="dropdown-item" href="{% url 'more_solution' %}">More Solution</a></li>
                     </ul>
                 </li>
 
@@ -116,8 +116,8 @@
                       FAQ
                     </a>
                     <ul class="dropdown-menu" style="background-color: #bab8b4;">
-                      <li><a class="dropdown-item" href="#">Online Customer Service</a></li>
-                      <li><a class="dropdown-item" href="#">Questions</a></li>
+                      <li><a class="dropdown-item" href="{% url 'online_server' %}">Online Customer Service</a></li>
+                      <li><a class="dropdown-item" href="{% url 'questions' %}">Questions</a></li>
                       <!-- <li>
                         <hr class="dropdown-divider">
                       </li>

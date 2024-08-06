@@ -57,7 +57,7 @@
                 <br>
                 <p class="h6"><strong>Total : {{product.total}}</strong></p>
                 <br>
-                <a class="btn btn-outline-dark mb-3" href="#" role="button" style="background-color: orange;">Add to Shopping Cart</a>
+                <a class="btn btn-outline-dark mb-3" href="{% url 'add_to_cart' product.id %}" role="button" style="background-color: orange;">Add to Shopping Cart</a>
                 <br>
               {% endfor %}
             </div>
@@ -93,7 +93,7 @@
             <p class="h6"><strong>Price : By Case</strong></p>
           {% endif %}
           <br>
-          <a class="btn btn-outline-dark mb-3" href="#" role="button" style="background-color: orange;">Add to Shopping Cart</a>
+          <a class="btn btn-outline-dark mb-3" href="{% url 'add_to_cart' product.id %}" role="button" style="background-color: orange;">Add to Shopping Cart</a>
         </div>
       </div>
       <hr>

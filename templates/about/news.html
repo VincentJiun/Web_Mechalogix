@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static from static %}
+{% block title %}
+News 
+{% endblock %}
+
+{% block content %}
+<section class="bsb-hero-1 px-3 bsb-overlay bsb-hover-pull" style="background-image: url('../../static/image/banner_home.jpg'); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 300px;" >
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11 col-lg-9 col-xl-7 col-xxl-6">
+          <!-- <h2 class="display-3 fw-bold mb-3">HOME</h2> -->
+          <!-- <p class="lead mb-5">Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p> -->
+          <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn bsb-btn-xl btn-light gap-3">Free Consultation</button>
+            <button type="button" class="btn bsb-btn-xl btn-outline-light">Buy Credits</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+</section>
+
+<div class="container-fluid">
+  <div class="row align-items-center text-center" style="height: 80px; background-color: #ff9900;">
+    <h2><strong>News</strong></h2>
+  </div>
+</div>
+
+<div class="container col-xxl-8 px-4 py-5">
+    <!-- <div class="row align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static 'image/company/company.png' %}" class="d-block mx-lg-auto img-fluid" alt="" width="400" height="400" loading="lazy">
+        </div>
+
+        <div class="col-lg-6">
+            <p class="h4"><strong>
+                Mechalogix Co., Ltd. was founded in 2017 and is dedicated to providing Industry 4.0 Cloud Internet services, specializing in research and development of information supply software services, data processing, product design industry, electronic component manufacturing, and numerous software to hardware products.
+            </strong></p>
+        </div>
+    </div> -->
+    <div class="row">
+        {% for new in news %}
+        <div class="col-12 col-lg-6 px-4 my-3">
+            <div class="card border-light text-start">
+                <!-- <a href="#">
+                    <img src="{{new.image_url}}" class="card-img-top" alt="...">
+                </a> -->
+                <img src="{{new.image_url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><strong>{{new.title}}</strong></h5>
+                  <p class="card-text">- {{new.report}}</p>
+                  <p class="card-text">- {{new.date}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

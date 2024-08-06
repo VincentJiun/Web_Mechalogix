@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Category, Product
 
@@ -27,3 +27,4 @@ def product_view(request, slug):
         'products': products,
         'specifications': specifications,
     })
+
